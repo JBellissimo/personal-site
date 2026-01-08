@@ -1,0 +1,338 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --text-primary: #1a1a1a;
+    --text-secondary: #4a4a4a;
+    --text-muted: #6a6a6a;
+    --background: #ffffff;
+    --accent: #0066cc;
+    --accent-hover: #0052a3;
+    --border: #e0e0e0;
+    --spacing-unit: 1.5rem;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-primary);
+    background: var(--background);
+    font-size: 18px;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Navigation */
+.nav {
+    border-bottom: 1px solid var(--border);
+    padding: 1.5rem 0;
+    margin-bottom: 3rem;
+}
+
+.nav-container {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-name {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: var(--text-primary);
+}
+
+/* Container */
+.container {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 0 2rem 4rem;
+}
+
+/* Typography */
+.intro {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+}
+
+.hero p {
+    margin-bottom: 1.25rem;
+    color: var(--text-secondary);
+}
+
+.focus {
+    margin-top: 2rem;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: var(--text-primary);
+}
+
+.link {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+.link:hover {
+    border-bottom-color: var(--accent);
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Sections */
+.section {
+    margin-top: 4rem;
+}
+
+.coming-soon {
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+/* Lists */
+.connect-list {
+    list-style: none;
+    margin: 1rem 0;
+}
+
+.connect-list li {
+    margin-bottom: 0.5rem;
+}
+
+.interest {
+    margin-top: 1.5rem;
+    color: var(--text-muted);
+}
+
+.work-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.case-study {
+    border-top: 1px solid var(--border);
+    padding-top: 2rem;
+}
+
+.case-study:first-child {
+    border-top: none;
+    padding-top: 0;
+}
+
+.case-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.case-meta {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.case-section {
+    margin-top: 1.5rem;
+}
+
+.case-section h4 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    margin-bottom: 0.75rem;
+}
+
+.case-section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.case-section li {
+    margin-bottom: 0.75rem;
+    padding-left: 1.25rem;
+    position: relative;
+    color: var(--text-secondary);
+}
+
+.case-section li:before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--text-muted);
+}
+
+/* Essay List */
+.essay-list {
+    list-style: none;
+    margin-top: 2rem;
+}
+
+.essay-item {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.essay-item:last-child {
+    border-bottom: none;
+}
+
+.essay-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.essay-title a {
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+.essay-title a:hover {
+    color: var(--accent);
+}
+
+.essay-meta {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+}
+
+.essay-preview {
+    color: var(--text-secondary);
+}
+
+/* Reading List */
+.reading-section {
+    margin-top: 3rem;
+}
+
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.book-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.book-title {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.book-author {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+}
+
+.book-note {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+/* Now Page */
+.now-section {
+    margin-top: 2rem;
+}
+
+.updated {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-top: 3rem;
+    font-style: italic;
+}
+
+/* Footer */
+.footer {
+    border-top: 1px solid var(--border);
+    margin-top: 6rem;
+    padding: 2rem 0;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    body {
+        font-size: 17px;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .container {
+        padding: 0 1.5rem 3rem;
+    }
+
+    .intro {
+        font-size: 1.25rem;
+    }
+
+    .book-grid {
+        grid-template-columns: 1fr;
+    }
+}
